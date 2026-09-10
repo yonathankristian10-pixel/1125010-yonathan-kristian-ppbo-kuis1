@@ -25,7 +25,7 @@ abstract class SmartDevice {
         this.status = "Mati";
     }
 
-    public abstract String getDeviceDetails();
+    public abstract String deviceDetails();
 }
 
 class SmartTv extends SmartDevice implements Connectable, Switchable {
@@ -67,20 +67,4 @@ class SmartSpeaker extends SmartDevice implements Connectable, Switchable {
         this.volume = volume;
         this.koneksi = "Tidak Terhubung";
     }
-
-    public void turnOn() {
-        status = "Menyala";
-    }
-
-    public void turnOff() {
-        status = "Mati";
-    }
-
-    public void connect() {
-        koneksi = "BLUETOOTH";
-    }
-
-    public void disconnect() {
-        koneksi = "Tidak Terhubung";
-    }
-}
+}   
